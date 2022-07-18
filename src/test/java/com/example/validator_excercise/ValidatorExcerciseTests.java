@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.example.validator_excercise;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class ValidatorExcerciseTests {
 
 	@Test
 	void contextLoads() {

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.validator_excercise;
 
 import org.springframework.stereotype.Service;
 

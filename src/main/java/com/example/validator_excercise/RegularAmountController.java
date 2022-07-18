@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.validator_excercise;
 
 import javax.validation.Valid;
 

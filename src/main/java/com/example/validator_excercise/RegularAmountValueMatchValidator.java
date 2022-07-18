@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.validator_excercise;
 
 import java.util.Objects;
 
@@ -7,7 +7,7 @@ import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.BeanWrapperImpl;
 
-import com.example.demo.RegularAmount.Frequency;
+import com.example.validator_excercise.RegularAmount.Frequency;
 
 public class RegularAmountValueMatchValidator implements ConstraintValidator<RegularAmountValueMatch, Object> {
 
@@ -23,9 +23,10 @@ public class RegularAmountValueMatchValidator implements ConstraintValidator<Reg
 
 		Frequency fieldValue = (Frequency) new BeanWrapperImpl(value).getPropertyValue(field);
 		String fieldMatchValue = (String) new BeanWrapperImpl(value).getPropertyValue(fieldMatch);
-		if (Objects.nonNull(fieldValue) && Objects.nonNull(fieldMatchValue)) {
+
+		if (Objects.nonNull(fieldValue) && Objects.nonNull(fieldMatchValue) && !fieldMatchValue.equals("")) {
 			Float result = Float.parseFloat(fieldMatchValue) / fieldValue.getValue();
-            
+
 			String stringVal = String.valueOf(result.doubleValue());
 			if (stringVal.contains("."))
 				try {
